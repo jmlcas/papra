@@ -1,0 +1,14 @@
+services:
+
+  papra:
+    image: ghcr.io/papra-hq/papra:latest-root
+    container_name: papra
+    restart: unless-stopped
+    ports:
+      - "1221:1221"
+    environment:
+      - AUTH_SECRET=UyNkCcvmY3j3qAuQPm1eFW3nxQ3zpVZEC7vAYwRdfu9SHgLV
+      - SERVER_BASE_URL=http://localhost:1221
+      - CLIENT_BASE_URL=http://localhost:1221
+    volumes:
+      - ./papra/data:/app/app-data
