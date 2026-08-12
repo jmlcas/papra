@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     ports:
       - "1221:1221"
-    user: "${UID}:${GID}"      
+    user: "1000:1000"
     environment:
       - AUTH_SECRET=UyNkCcvmY3j3qAuQPm1eFW3nxQ3zpVZEC7vAYwRdfu9SHgLV
       - APP_BASE_URL=http://localhost:1221
